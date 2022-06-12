@@ -89,3 +89,86 @@ export interface AppContent {
     refererRule?: (r: string) => string;
   };
 }
+
+export type Extension = (content: GetContent, parser: Parser) => AppContent;
+
+export interface Language {
+  id: string;
+  name: string;
+  home: {
+    head: string;
+  };
+  library: {
+    head: string;
+  };
+  favorites: {
+    head: string;
+  };
+  extensions: {
+    pin_option_text: string;
+    search_placeholder: string;
+    select_title: string;
+  };
+  details: {
+    genders: string;
+    status: string;
+    chapters: string;
+  };
+  settings: {
+    options_1: {
+      head: string;
+      appearance: {
+        option_text: string;
+        content: {
+          head_text: string;
+          sub_text1: string;
+          radios: {
+            text1: string;
+            text2: string;
+          };
+          sub_text2: string;
+          btn_text1: string;
+          btn_text2: string;
+        };
+      };
+      advanced: {
+        option_text: string;
+      };
+      language: {
+        option_text: string;
+        content: {
+          head_text: string;
+          sub_text: string;
+        };
+      };
+    };
+  };
+}
+
+export interface BaseTheme {
+  primary: string;
+  secondary: string;
+  background1: string;
+  background2: string;
+  fontPrimary: string;
+  fontSecondary: string;
+  navbar: {
+    background: string;
+    buttons: {
+      background: string;
+      color: string;
+      hover: string;
+    };
+  };
+  buttons: {
+    background: string;
+    hover: string;
+    color: string;
+    border: string;
+  };
+}
+
+export interface Theme {
+  dark: BaseTheme;
+  light: BaseTheme;
+}
