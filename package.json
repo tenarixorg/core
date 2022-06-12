@@ -1,5 +1,6 @@
 {
-  "name": "@tenarix/extension",
+  "name": "@tenarix/core",
+  "description": "Core library for Tenarix",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -7,6 +8,9 @@
   "author": "Akuqt",
   "keywords": [
     "extension",
+    "language",
+    "theme",
+    "core",
     "tenarix"
   ],
   "scripts": {
