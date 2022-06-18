@@ -18,6 +18,11 @@ export type Parser = typeof load;
 
 export type Http = typeof axios;
 
+export interface Util {
+  decodeRoute(route: string): string;
+  encodeRoute(route: string): string;
+}
+
 export type GetContent = (
   url: string,
   execPath: string,
