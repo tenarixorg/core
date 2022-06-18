@@ -2,6 +2,9 @@ import StealthPlugin from "puppeteer-extra-plugin-stealth";
 import puppeteer from "puppeteer-extra";
 import { ContentResult, Opts } from "./types";
 import { load } from "cheerio";
+import axios from "axios";
+
+axios.defaults.adapter = require("axios/lib/adapters/http");
 
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50";
@@ -57,3 +60,5 @@ export const content = async (
 };
 
 export const parser = load;
+
+export const http = axios;

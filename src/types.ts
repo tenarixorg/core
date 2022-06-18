@@ -1,5 +1,6 @@
 import { Page } from "puppeteer";
 import { load } from "cheerio";
+import axios from "axios";
 
 export interface Opts {
   action?: (page: Page) => Promise<void>;
@@ -14,6 +15,8 @@ export interface ContentResult {
 }
 
 export type Parser = typeof load;
+
+export type Http = typeof axios;
 
 export type GetContent = (
   url: string,
