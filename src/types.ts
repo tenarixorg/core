@@ -98,7 +98,12 @@ export interface AppContent {
   };
 }
 
-export type Extension = (content: GetContent, parser: Parser) => AppContent;
+export type Extension = (
+  content: GetContent,
+  parser: Parser,
+  http: Http,
+  util: Util
+) => AppContent;
 
 export interface Language {
   id: string;
