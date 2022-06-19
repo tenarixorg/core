@@ -27,7 +27,7 @@ export const content = async (
     executablePath: execPath,
     args: ["--no-sandbox", "--disabled-setupid-sandbox"],
   });
-  const page = await browser.newPage();
+  const [page] = await browser.pages();
   await page.setRequestInterception(true);
   page.on("request", (req) => {
     if (req.resourceType() === "document") {
